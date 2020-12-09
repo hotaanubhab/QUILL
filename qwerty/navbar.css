@@ -1,0 +1,9 @@
+body{
+    background-color: gray;
+  }
+  .jumbotron{
+   background-color: darkgray; 
+  }
+  .navbar{
+    background-color: white;
+  }
