@@ -3,13 +3,16 @@ body{
   }
   .jumbotron{
    background-color: darkgray; 
+   height: auto;
   }
   .navbar{
-    background-color:#cc7a00;
+    background-color:white;
+    opacity: 0.8;
   }
 
+
   .navbar-brand {
-    width:150px;
+    width:300px;
     font-size: 24px;
   }
 
@@ -17,9 +20,22 @@ body{
     width:150px;
     font-size: 24px;
   }
-  .navbar-brand img {
+  .navbar-brand img{
     height: 50px;
- 
-     float: left;
-    margin-right: 7px;
- }
+    float: left;
+    margin-right: 10px;
+  }
+
+    .vh100
+    {
+      height: 100vh;
+    }
+    .carousel .carousel-inner img {
+      display:block;
+      object-fit: cover;
+  }
+
+
+
+
+  
