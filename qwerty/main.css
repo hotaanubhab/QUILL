@@ -1,13 +1,10 @@
 body{
-    background-color: gray;
+    background-color: rgb(255, 255, 255);
   }
-  .jumbotron{
-   background-color: darkgray; 
-   height: auto;
-  }
+
   .navbar{
     background-color:white;
-    opacity: 0.8;
+    opacity: 0.9;
   }
 
 
@@ -17,8 +14,8 @@ body{
   }
 
   .navbar-brand {
-    width:150px;
-    font-size: 24px;
+    width:50px;
+    padding: 0px;
   }
   .navbar-brand img{
     height: 50px;
@@ -30,12 +27,21 @@ body{
     {
       height: 100vh;
     }
+    .vh50
+    {
+      
+      height: 50vh;
+    }
     .carousel .carousel-inner img {
       display:block;
       object-fit: cover;
   }
 
-
-
-
-  
+.r1{
+  padding-top: 20px;
+}
+.r2{
+  padding-top: 20px;
+}
+.l1{
+ text-align: center;}
