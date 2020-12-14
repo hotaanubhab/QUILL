@@ -12,7 +12,7 @@ $(function()
             });
   
             $("#checkout").datepicker({
-                numberOfMonths:1,
+                numberOfMonths:1,minDate: 1,
                 dateFormat:'d MM,yy',
                 onSelect:function(selectdate){
                     var dt=new Date(selectdate);
