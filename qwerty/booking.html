@@ -48,7 +48,8 @@
           </div>
         </div>
 
-        <div class="mb-3">
+        <div class="row">
+        <div class="mb-3 col-md-9">
           <label for="phonenumber">Phone Number</label>
          
            
@@ -59,15 +60,34 @@
         
         </div>
 
-        <div class="mb-3">
-          <label for="email">Email</label>
-          <input type="email" class="form-control" id="email" placeholder="you@example.com">
-          <div class="invalid-feedback">
-            Please enter a valid email address.
-          </div>
+        <div class="mb-3 col-md-3">
+          <label for="adult">Number of Adults</label>
+          <select id="adult "class="form-control custom-select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+          
         </div>
+      </div>
+
         
+          <div class="mb-3">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="you@example.com">
+            <div class="invalid-feedback">
+               Please enter a valid email address.
+             </div>
+            </div>
+
            
+     
+        
+        
+
         <div class="row">
             <div class="col mb-3">
               <label for="checkin">Check In</label>
@@ -83,6 +103,8 @@
                 Please select a valid check out date.
               </div>
             </div>
+           
+           
             
           </div>
       
