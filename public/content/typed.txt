@@ -7,4 +7,4 @@ connectivity:
 850 m candolim beach 10 mins walk
 55 min dabolim airport 38 km car
 24 km karmali railway station 36 min car 
-40 km vasco-da-gamma railway station 1hr car
+\40 km vasco-da-gamma railway station 1hr car
