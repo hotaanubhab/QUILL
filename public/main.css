@@ -53,6 +53,7 @@ height: 40px;
 
 .infotxt{
   padding-top: 1em;
+  cursor: default;
 }
 .infotxt{
 
@@ -135,24 +136,116 @@ footer .container{
   padding-left: 1em;
   margin-bottom: 0.5em;
 }*/
+/*carousel text*/
 
-.ctxt1,.ctxt2,.ctxt4,.ctxt5,.ctxt6,.ctxt7
+@media (min-width:150px)  {
+  .ctxt1,.ctxt2,.ctxt3,.ctxt4,.ctxt5,.ctxt6,.ctxt7
 {  
 z-index: 10;
-padding: 0.5rem;
+padding: 0.3rem;
 position: absolute;
-top: 20vh;
-left: 10vw;
 background-color: rgba(49, 49, 49, 0.582);
 color: rgb(255, 255, 255);
+cursor: default;
+font-size: 1.5rem;
+text-align: center; 
 }
 
-.ctxt3{
-z-index: 10;
-padding: 0.5rem;
-position: absolute;
+.ctxt1,.ctxt4{
+  top: 15vh;
+  right: 5vw; 
+  left: 0vw;
+ 
+}
+.ctxt2,.ctxt5{
+  top: 15vh;
+  left: 5vw;
+  right: 0vw; 
+ 
+}
+.ctxt3,.ctxt7{
 bottom: 10vh;
 left: 10vw;
-background-color: rgba(0, 0, 0, 0.438);
-color: rgb(255, 255, 255);
+right: 0vw;
+}
+.ctxt6{
+  bottom: 15vh;
+  right: 10vw;
+  left: 0vw;
+  }
+
+ }
+
+
+@media (min-width:641px)  { 
+  .ctxt1,.ctxt2,.ctxt3,.ctxt4,.ctxt5,.ctxt6,.ctxt7
+  {  
+  z-index: 10;
+  padding: 0.3rem;
+  position: absolute;
+  background-color: rgba(49, 49, 49, 0.582);
+  color: rgb(255, 255, 255);
+  cursor: default;
+  font-size: 1.5rem;
+  text-align: center; 
+  }
+  
+  .ctxt1,.ctxt4{
+    top: 15vh;
+    right: 25vw;
+    left: 0vw; 
+  }
+  .ctxt2,.ctxt5{
+    top: 15vh;
+    left: 45vw; 
+    right: 0vw;
+  }
+  .ctxt3,.ctxt7{
+  bottom: 10vh;
+  left: 40vw;
+  right: 0vw;
+  }
+  .ctxt6{
+    bottom: 15vh;
+    right: 50vw;
+    left: 0vw;
+    }
+  
+}
+
+
+@media (min-width:1025px) {
+  .ctxt1,.ctxt2,.ctxt3,.ctxt4,.ctxt5,.ctxt6,.ctxt7
+  {  
+  z-index: 10;
+  padding: 0.3rem;
+  position: absolute;
+  background-color: rgba(49, 49, 49, 0.582);
+  color: rgb(255, 255, 255);
+  cursor: default;
+  font-size: 2rem;
+  text-align: center; 
+  }
+  
+  .ctxt1,.ctxt4{
+    top: 15vh;
+    right: 50vw;
+    left: 0vw; 
+  }
+  .ctxt2,.ctxt5{
+    top: 15vh;
+    left: 70vw; 
+    right: 0vw;
+  }
+  .ctxt3,.ctxt7{
+  bottom: 10vh;
+  left: 60vw;
+  right: 0vw;
+  }
+  .ctxt6{
+    bottom: 15vh;
+    right: 70vw;
+    left: 0vw;
+    }
+  
 }
