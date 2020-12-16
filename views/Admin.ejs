@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Booking Data</title>
+        <style>
+            td{ padding: 10px;} 
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Checkin</th>
+                <th>Checkout</th>
+                <th>Adults</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Status</th>
+            </tr>
+        <% if (booking.length > 0) { %>
+            <% booking.forEach(booking => { %>
+                <% 
+                var m = booking.check_in;
+                var n = booking.check_out;
+                var checkin_String = m.getFullYear() +"/"+ (m.getMonth()+1) +"/"+ m.getDate();
+                var checkout_String = n.getFullYear() +"/"+ (n.getMonth()+1) +"/"+ n.getDate() %>
+              <tr>
+                <td><%= booking.first_name+' '+booking.last_name %></td>
+                <td><%= checkin_String %></td>
+                <td><%= checkout_String %></td>
+                <td><%= booking.adults %></td>
+                <td><%= booking.phone %></td>
+                <td><%= booking.email %></td>
+                <% if(booking.status==0) { %>
+                <td><%= "Not Confirmed"%></td>
+                <% } else { %>
+                <td><%= "Confirmed"%></td>
+                <% } %>
+                <td><a href="/admin/<%= booking._id%>"><button>Change</button></a></td>
+            </tr>
+            <% }) %>
+          <% } else { %>
+            <p>There are no bookings to display...</p>
+          <% } %>
+        </table>
+    </body>
+</html>
