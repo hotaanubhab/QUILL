@@ -35,7 +35,49 @@
           });
       });
 </script>
+<script>
+
+  function checkForm(form)
+  {
+  
+    if(!form.terms.checked) {
+      alert("Please indicate that you accept the Terms and Conditions");
+      form.terms.focus();
+      return false;
+    }
+    return true;
+  }
+
+</script>
     <script src="https://kit.fontawesome.com/2291809f17.js" crossorigin="anonymous"></script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  window.addEventListener('load', function () {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation')
+
+    // Loop over them and prevent submission
+    Array.prototype.filter.call(forms, function (form) {
+      var check = document.getElementById('check');
+      check.addEventListener('change', function (event) {
+        if(this.checked){
+        if (form.checkValidity() === false) {
+          event.preventDefault()
+          event.stopPropagation()
+          this.checked = false;
+        }
+      }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+  }, false)
+})()
+
+    </script>
 
 
   </head>
@@ -53,7 +95,7 @@
     
     <div class="col-md-8 order-md-1">
       <h4 class="mb-3">Credentials</h4>
-      <form class="needs-validation" novalidate method="POST" action="/booking">
+      <form class="needs-validation" novalidate method="POST" action="/booking" onsubmit="return checkForm(this);">
         <div class="row">
           <div class="col-md-6 mb-3">
             <label for="firstName">First name</label>
@@ -100,7 +142,7 @@
         
           <div class="mb-3">
             <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="you@example.com" name="email">
+            <input type="email" class="form-control" id="email" placeholder="you@example.com" name="email" required>
             <div class="invalid-feedback">
                Please enter a valid email address.
              </div>
@@ -114,14 +156,14 @@
         <div class="row">
             <div class="col mb-3">
               <label for="checkin">Check In</label>
-              <input type="text" autocomplete="off" class="form-control" id="checkin" name="check_in">
+              <input type="text" onkeydown="return false" autocomplete="off" class="form-control" id="checkin" name="check_in" required>
               <div class="invalid-feedback">
                 Please select a check in date.
               </div>
             </div>
             <div class="col mb-3">
               <label for="checkout">Check Out</label>
-              <input type="text" autocomplete="off" class="form-control"  id="checkout" name="check_out">
+              <input type="text" onkeydown="return false" autocomplete="off" class="form-control"  id="checkout" name="check_out" required>
               <div class="invalid-feedback">
                 Please select a valid check out date.
               </div>
@@ -131,7 +173,7 @@
             
           </div>
       
-
+          <p><input type="checkbox" name="terms" id="check" required> I accept the <u>Terms and Conditions</u></p>
         <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
       </form>
     </div>
@@ -147,6 +189,7 @@
     </ul>
   </footer>
 </div>
+
 
     </body>
 </html>

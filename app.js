@@ -49,9 +49,10 @@ app.get('/Admin',(req,res)=>{
     
 })
 
-app.get('/admin/:id',(req,res)=>{
+app.get('/admin/:id&:s',(req,res)=>{
     const id = req.params.id;
-    Booking.updateOne({_id:id},{status:1})
+    const s = req.params.s;
+    Booking.updateOne({_id:id},{status:s})
     .then(result=>{
         res.redirect('/Admin')
     })
@@ -64,7 +65,6 @@ app.post('/booking',(req,res)=>{
     const booking = new Booking(req.body);
     console.log(booking.check_in);
     console.log(booking.check_out);
-    booking.status = 0;
     booking.save()
         .then(result=>{
             res.redirect('/Home');
@@ -72,6 +72,18 @@ app.post('/booking',(req,res)=>{
         .catch(err=>{
             console.log(err);
         })
+})
+
+app.delete('/admin/:id',(req,res)=>{
+    console.log("delete");
+    const id = req.params.id;
+    Booking.findByIdAndDelete(id)
+    .then(result => {
+        res.json({ redirect: '/admin' });
+    })
+    .catch(err => {
+        console.log(err);
+    });
 })
 
 app.use((req,res)=>

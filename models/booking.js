@@ -43,7 +43,8 @@ const bookSchema = new Schema({
     },
     status:
     {
-        type: Number,
+        type: Boolean,
+        default: false,
     }
 },{timestamps: true})
 
