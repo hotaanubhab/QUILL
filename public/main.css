@@ -112,7 +112,10 @@ z-index: 10000;
 }
 .fas,.fab,.far{
 font-size: 1.8rem;
-color: rgb(199, 111, 16);
+background: rgb(255,133,0);
+    background: linear-gradient(90deg, rgba(255,133,0,1) 0%, rgba(255, 8, 0, 0.822) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 display: inline-block;
 vertical-align: middle;
 }
