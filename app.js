@@ -42,6 +42,10 @@ app.get('/booking',(req,res)=>{
     res.render('booking');
 })
 
+app.get('/confirm',(req,res)=>{
+    res.render('confirm')
+})
+
 app.get('/Admin',(req,res)=>{
     Booking.find().sort({ createdAt: -1})
     .then(result=>{
@@ -71,7 +75,7 @@ app.post('/booking',(req,res)=>{
     console.log(booking.check_out);
     booking.save()
         .then(result=>{
-            res.redirect('/Home');
+            res.redirect('/confirm');
         })
         .catch(err=>{
             console.log(err);
