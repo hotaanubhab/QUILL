@@ -11,16 +11,19 @@
   .checkmark {
     width: 5rem;
     height: 5rem;
-    border-radius: 900%;
+    border-radius: 90%;
     display: block;
     stroke-width: 3;
     stroke: #fff;
     stroke-miterlimit: 10;
-    margin: 100px auto 5vh auto;
+   margin:0px auto ;
     box-shadow: inset 0px 0px 0px rgb(255,133,0);
     animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
   }
-  
+  .wrap3{
+    padding-top: 25vh;
+    padding-bottom: 20px;
+  }
   .checkmark__check {
     transform-origin: 50% 50%;
     stroke-dasharray: 48;
@@ -49,5 +52,5 @@
   .conftxt{
       text-align: center;
       font-size: 2rem;
-      padding-bottom: 15px;
+      padding-bottom: 20px;
   }
