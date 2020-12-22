@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Booking Data</title>
+        <style>
+            td{ padding: 10px;} 
+        </style>
+        
+    </head>
+    <body>
+        <table>
+            
+        <% if (booking.length > 0) { %>
+          <tr>
+            <th>Name</th>
+            <th>Checkin</th>
+            <th>Checkout</th>
+            <th>Adults</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Status</th>
+        </tr>
+            <% booking.forEach(booking => { %>
+                <% 
+                var m = booking.check_in;
+                var n = booking.check_out;
+                var checkin_String = m.getFullYear() +"/"+ (m.getMonth()+1) +"/"+ m.getDate();
+                var checkout_String = n.getFullYear() +"/"+ (n.getMonth()+1) +"/"+ n.getDate() %>
+              <tr>
+                <td><%= booking.first_name+' '+booking.last_name %></td>
+                <td><%= checkin_String %></td>
+                <td><%= checkout_String %></td>
+                <td><%= booking.adults %></td>
+                <td><%= booking.phone %></td>
+                <td><%= booking.email %></td>
+                <% if(booking.status==false) { %>
+                <td><%= "Not Confirmed"%></td>
+                
+                <% } else { %>
+                <td><%= "Confirmed"%></td>
+                
+                <% } %>
+                <td><a href="/admin/<%= booking._id%>&<%= !booking.status%>"><button>Change</button></a></td>
+                <td><a class='delete' data-doc="<%= booking._id %>" ><button>Delete</button></a></td>
+                
+            </tr>
+            <% }) %>
+          <% } else { %>
+            <p>There are no bookings to display...</p>
+          <% } %>
+        </table>
+        <script>
+            const delB = document.querySelector('a.delete');
+            delB.addEventListener('click', (e) => {
+      const endpoint = `/admin/${delB.dataset.doc}`;
+
+      fetch(endpoint, {
+        method: 'DELETE',
+      })
+      .then(response => response.json())
+      .then(data => window.location.href = data.redirect)
+      .catch(err => console.log(err));
+    });
+        </script>
+    </body>
+</html>
