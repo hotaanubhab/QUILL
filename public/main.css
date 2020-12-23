@@ -37,6 +37,7 @@ height: 40px;
   }
   h3,.orang{
     color: rgb(255,133,0) ;
+    cursor: default;
   }
   .cursordefault{
     cursor: default;
@@ -119,8 +120,10 @@ html{
 font-size: 1.8rem;
 background: rgb(255,133,0);
     background: linear-gradient(90deg, rgba(255,133,0,1) 0%, rgba(255, 8, 0, 0.822) 100%);
-    -webkit-background-clip: text;
+     -webkit-background-clip: text; 
+     background-clip: text; 
     -webkit-text-fill-color: transparent;
+  
 display: inline-block;
 vertical-align: middle;
 }
