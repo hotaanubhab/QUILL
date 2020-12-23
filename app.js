@@ -13,7 +13,7 @@ const dbURI = "***REMOVED***"
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
 .then(result => {app.listen(port, () => {
-    console.log(`Our app is running on port ${ port }`);
+    console.log(`Some shit is going down on port ${ port }`);
 });})
   .catch(err => console.log(err));
 
@@ -40,6 +40,14 @@ app.get('/Home',(req,res)=>{
 
 app.get('/booking',(req,res)=>{
     res.render('booking');
+})
+
+app.get('/err',(req,res)=>{
+    res.render('err');
+})
+
+app.get('/confirm',(req,res)=>{
+    res.render('confirm')
 })
 
 app.get('/Admin',(req,res)=>{
@@ -71,7 +79,7 @@ app.post('/booking',(req,res)=>{
     console.log(booking.check_out);
     booking.save()
         .then(result=>{
-            res.redirect('/Home');
+            res.redirect('/confirm');
         })
         .catch(err=>{
             console.log(err);

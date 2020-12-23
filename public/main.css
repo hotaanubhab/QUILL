@@ -3,7 +3,7 @@ body{
   font-family: 'Bahnschrift';
 
 }
-
+/* NAVBAR */
 .navbar{
   background-color: #f0f0f0e3;
   opacity: 1;
@@ -15,14 +15,17 @@ font-family: 'Trajan Pro';
 color: #FF3814;
 font-size: 25px;
  font-weight: 510;
-}
-      
-.navbar-brand:visited {color:#FF3814;} 
-.navbar-brand:hover {color:#ff7259;}   
-.navbar-brand:active {color:#FF3814;}
+}     
+.navbar-brand:visited {color:inherit;} 
+.navbar-brand:hover {color:inherit;}   
+.navbar-brand:active {color:inherit;}
 .navbar-brand img{
 height: 40px;
 }
+.nav-link{
+  padding: 5px 0px;
+  }
+/* UTILITY */
   .vh100
   {
     height: 100vh;
@@ -32,21 +35,23 @@ height: 40px;
     
     height: 50vh;
   }
-  .carousel .carousel-inner img {
-    display:block;
-    object-fit: cover;
-}
+  h3,.orang{
+    color: rgb(255,133,0) ;
+  }
+  .cursordefault{
+    cursor: default;
+  }
+ 
+
+/* CONTENT IN BODY  */
 .r1,.r2,.r3,.r4{
   padding-top: 1em;
 }
 .r4{
   margin-bottom: 20px;
 }
-
-
 .l1{
 text-align: center;}
-
 .col-md-6{
 font-size: 1rem;
 }
@@ -54,13 +59,11 @@ font-size: 1rem;
 .infotxt{
 padding-top: 1em;
 cursor: default;
-}
-.infotxt{
-
 list-style-type: circle;
 margin: 0%;
 padding-left:20px;
 }
+/* BOTTOM BAR */
 .bottombar{
 position: sticky;
 position:-webkit-sticky; 
@@ -70,45 +73,47 @@ position:-webkit-sticky;
     background: rgb(255,133,0);
     background: linear-gradient(90deg, rgba(255,133,0,1) 0%, rgba(110,0,255,1) 47%, rgba(255,10,0,1) 100%);
 }
-.bookbutton{
-background-color:  #FF3814;
+
+/* BOOKING BUTTON */
+ .bookbutton{
+background-color: rgb(255,133,0);
 color: white;
 height: 40px;
 border-radius: 4px;
-border: none;
 padding: 2px 8px;
 text-align: center;
-text-decoration: none;
 font-size: 26px;
-opacity: 10;
-border: none;
-outline: none;
+opacity: 1;
+position: relative;
+z-index: 11;
+transition: 0.2s ease-in-out;
 }
-.bookbutton:hover{
-background-color:  #f88874;
+ .bookbutton:hover{
+  -webkit-transform: scale(1.1,1.1);
+  -moz-transform: scale(1.1,1.1);
+  -ms-transform: scale(1.1,1.1);
+  transform: scale(1.1,1.1);
 cursor: pointer;
+background-color:  #FF3814;
 
-}
+} 
 .bookbutton:active{
-
-}
-.bookbutton:visited{
-
-}
-.nav-link{
-padding: 5px 0px;
+  background-color:  #FF3814;
 }
 
-.ui-datepicker{
+/* FOOTER */
 
-}
-
-footer{
-background-color: rgba(197, 195, 195, 0.74);
+.conf-footer{
+background-color: #f0f0f0e3;
 font-size: large;
 padding-top: 10px;
+padding-bottom: 10px;
 z-index: 10000;
 
+}
+
+html{
+  background-color:  #f0f0f0e3;
 }
 .fas,.fab,.far{
 font-size: 1.8rem;
@@ -119,37 +124,45 @@ background: rgb(255,133,0);
 display: inline-block;
 vertical-align: middle;
 }
+
 a, a:hover, a:focus, a:active {
-text-decoration: none;
-color: inherit;
-}
-
-.cont li
-{
-list-style: none;
-
-}
-footer .container{
-padding-top: 1rem;
-}
-
-li span{
-cursor: default;
-}
-span.cont-txt
-{
-padding-left:0.4rem;
-display: inline-block;
-vertical-align:middle;
+  text-decoration: none;
+  color: inherit;
 }
 .foothead{
-text-align:center;
+  text-align: center;
+  cursor: default;
+}
+.FH2{
+  padding-top: 10px;
+}
 
+.wrap1{
+  width: 100%;
+}
+.wrap2{
+width: max-content;
+  padding-top: 10px;
+  margin: 0 auto;
+}
+
+.cont-txt{
+  padding-left: 5px;
 }
 .btn{
   margin-bottom: 2rem;
+  background-color:  rgb(255,133,0) ;
+border: none;
 }
-/*carousel text*/
+  .btn:hover,.btn:active{
+    background-color:  rgb(221, 114, 0) ;
+  }
+
+ /* CAROUSEL */
+ .carousel .carousel-inner img {
+  display:block;
+  object-fit: cover;
+}
 .ctxt1,.ctxt2,.ctxt3,.ctxt4,.ctxt5,.ctxt6,.ctxt7
 {  
 z-index: 10;
@@ -249,7 +262,7 @@ font-size: 0.95rem;
 }
 
 /*thumbnails*/
-.galimg{
+/* .galimg{
 height:auto;
 max-width: 49%;
 display: inline-block;
@@ -283,4 +296,4 @@ display: inline-block;
     transform: translate(-50%, -50%);
     text-align: center;
   }
- 
+  */
