@@ -81,6 +81,7 @@ app.post('/booking',(req,res)=>{
             res.redirect('/confirm');
         })
         .catch(err=>{
+            console.log(err);
             res.redirect('/err');
         })
 })
