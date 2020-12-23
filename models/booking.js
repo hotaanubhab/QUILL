@@ -1,8 +1,10 @@
 const mongoose = require('mongoose');
-const mongooseTypePhone = require('mongoose-type-phone');
+const mongooseIntlPhoneNumber = require('mongoose-intl-phone-number');
 const mongoose_em = require('mongoose-type-email');
 
 const Schema = mongoose.Schema;
+
+
 
 const bookSchema = new Schema({
     first_name:
@@ -25,13 +27,9 @@ const bookSchema = new Schema({
         required: true,
     },
     phone: {
-        type: mongoose.SchemaTypes.Phone,
-        required: 'Phone number should be set correctly',
-        allowBlank: false,
-        allowedNumberTypes: [mongooseTypePhone.PhoneNumberType.MOBILE, mongooseTypePhone.PhoneNumberType.FIXED_LINE_OR_MOBILE],
-        phoneNumberFormat: mongooseTypePhone.PhoneNumberFormat.INTERNATIONAL, // can be omitted to keep raw input
-        defaultRegion: 'IN',
-        parseOnGet: false
+        type: mongooseIntlPhoneNumber// can be omitted to keep raw input
+        
+        
     },
     check_in: {
         type: Date,
@@ -46,7 +44,15 @@ const bookSchema = new Schema({
         type: Boolean,
         default: false,
     }
-},{timestamps: true})
+},{timestamps: true});
+
+bookSchema.plugin(mongooseIntlPhoneNumber, {
+    hook: 'validate',
+    phoneNumberField: 'phoneNumber',
+    nationalFormatField: 'nationalFormat',
+    internationalFormat: 'internationalFormat',
+    countryCodeField: 'countryCode',
+});
 
 const Booking = mongoose.model('Booking',bookSchema);
 module.exports = Booking;
