@@ -4,7 +4,8 @@
   "description": "The Website of Quill Hotels",
   "main": "]",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1","start": "node app.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "Prabhav Tewari & Anubhab Hota",
   "license": "ISC",
@@ -12,6 +13,7 @@
     "@ecodev/natural-gallery-js": "^7.0.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
+    "libphonenumber-js": "^1.9.6",
     "loadash": "^1.0.0",
     "mongoose": "^5.11.7",
     "mongoose-intl-phone-number": "^1.1.1",

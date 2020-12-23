@@ -9,13 +9,13 @@ const app = express();
 
 const port = process.env.PORT || 3000;
 
-const dbURI = "***REMOVED***"
+const dbURI = "***REMOVED***";
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
 .then(result => {app.listen(port, () => {
     console.log(`Some shit is going down on port ${ port }`);
 });})
-  .catch(err => console.log(err));
+.catch(err => console.log(err));
 
 app.set('view engine','ejs');
 
@@ -75,14 +75,13 @@ app.get('/admin/:id&:s',(req,res)=>{
 
 app.post('/booking',(req,res)=>{
     const booking = new Booking(req.body);
-    console.log(booking.check_in);
-    console.log(booking.check_out);
+    
     booking.save()
         .then(result=>{
             res.redirect('/confirm');
         })
         .catch(err=>{
-            console.log(err);
+            res.redirect('/err');
         })
 })
 
