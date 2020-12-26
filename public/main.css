@@ -262,41 +262,7 @@ right: 0vw;
 .mailtoolong{
 font-size: 0.95rem;
 }
+}.centerthis{
+text-align: center;
+/* display: inline; */
 }
-
-/*thumbnails*/
-/* .galimg{
-height:auto;
-max-width: 49%;
-display: inline-block;
-}
-
-  .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: auto;
-    width: auto;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: #303233;
- 
-  }
-  .overlay:hover {
-    opacity:1;
-    background-color: #3032336b;
-  }
-  .overlaytxt{
-    color: white;
-    font-size: 2.5rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  */

@@ -17,7 +17,7 @@
 .gallery-block.compact-gallery .item{
   overflow: hidden;
   margin-bottom: 0;
-  background: black;
+  background: rgba(0, 0, 0, 0);
   opacity: 1;
 }
 
@@ -47,7 +47,7 @@
     transition: 0.8s ease;
     text-align: center;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.39));
+  
 }
 
 .gallery-block.compact-gallery .item .description .description-heading{
