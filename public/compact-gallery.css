@@ -1,6 +1,6 @@
 .gallery-block{
-  padding-bottom: 60px;
-  padding-top: 60px;
+  padding-bottom: 30px;
+  padding-top: 30px;
 }
 
 .gallery-block .heading{
@@ -35,7 +35,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    color: #fff;
+    color: rgb(255,133,0) ;
     padding: 10px;
     font-size: 17px;
     line-height: 18px;
@@ -43,10 +43,9 @@
     padding-top: 15px;
     padding-bottom: 15px;
     opacity: 1;
-    color: #fff;
     transition: 0.8s ease;
     text-align: center;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
   
 }
 
@@ -62,6 +61,10 @@
 }
 
 @media (min-width: 576px) {
+  .description{
+    color: rgb(0, 0, 0); 
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.39));
+  }
 
   .gallery-block.compact-gallery .item .description {
     opacity: 0; 

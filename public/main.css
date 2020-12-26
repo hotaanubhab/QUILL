@@ -147,6 +147,12 @@ a, a:hover, a:focus, a:active {
 width: max-content;
   padding-top: 10px;
   margin: 0 auto;
+  transition: 0.4s ease-in-out;
+}
+.wrap2:hover{
+  transform: scale(1.2);
+ 
+  
 }
 
 .cont-txt{
