@@ -180,9 +180,10 @@ position: absolute;
 background-color: rgba(216, 128, 14, 0.596);
 color: rgb(255, 255, 255);
 cursor: default;
-font-size: 2rem;
+font-size: 1.5rem;
 text-align: center; 
 }
+
 @media (min-width:150px)  {
 
 .ctxt1,.ctxt4{
