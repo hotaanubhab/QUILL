@@ -25,7 +25,15 @@ height: 40px;
 .nav-link{
   padding: 5px 0px;
   }
+  /*fixes*/
+  .ui-datepicker{
+    z-index: 101 !important;
+  }
+  .admintable{
+    margin-top: 68px;
+  }
 /* UTILITY */
+/*t3st*/
   .vh100
   {
     height: 100vh;
