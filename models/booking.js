@@ -47,7 +47,11 @@ const bookSchema = new Schema({
 },{timestamps: true});
 
 bookSchema.post('save', async function(next) {
-    
+                
+                var m = this.check_in;
+                var n = this.check_out;
+                var checkin_String = m.getFullYear() +"/"+ (m.getMonth()+1) +"/"+ m.getDate();
+                var checkout_String = n.getFullYear() +"/"+ (n.getMonth()+1) +"/"+ n.getDate() 
 
         var transporter = nodemailer.createTransport({
          
@@ -71,7 +75,14 @@ bookSchema.post('save', async function(next) {
          from: '***REMOVED***',
          to: '***REMOVED***',
          subject: "New Booking",
-         text: "New booking recieved , check Admin page."
+         text: "New booking recieved , check Admin page.\n\n"
+         +"Booking ID: "+this._id
+         +"\nName : "+this.first_name+" "+this.last_name
+         +"\nPhone : "+this.phone
+         +"\nEmail : "+this.email
+         +"\nAdults : "+this.adults
+         +"\nCheckin : "+checkin_String
+         +"\nCheckout : "+checkout_String
        };
        
        transporter.sendMail(mailOptions).then(() => {

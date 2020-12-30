@@ -79,6 +79,11 @@ app.get('/login',(req,res)=>{
     res.render('login')
 });
 
+app.get('/logout',(req,res)=>{
+    res.cookie('jwt', '', { maxAge: 1 });
+    res.redirect('/');
+});
+
 app.get('/signup',(req,res)=>{
     res.render('signup')
 });
@@ -148,7 +153,7 @@ app.get('/admin/:id&:s',requireAuth,(req,res)=>{
     const s = req.params.s;
     Booking.updateOne({_id:id},{status:s})
     .then(result=>{
-        res.redirect('/Admin')
+        res.redirect('back');
     })
     .catch(err=>{
         console.log(err);
