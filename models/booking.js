@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const mongoose_em = require('mongoose-type-email');
+const nodemailer = require('nodemailer');
 
 
 const Schema = mongoose.Schema;
@@ -44,6 +45,43 @@ const bookSchema = new Schema({
         default: false,
     }
 },{timestamps: true});
+
+bookSchema.post('save', async function(next) {
+    
+
+        var transporter = nodemailer.createTransport({
+         
+            host: "***REMOVED***",  
+            secure: true,
+            secureConnection: false, // TLS requires secureConnection to be false
+            tls: {
+                ciphers:'SSLv3'
+            },
+            requireTLS:true,
+            port: 465,
+            debug: true,
+            auth: {
+                user: "***REMOVED***",
+                pass: "***REMOVED***" 
+            }
+         
+         });
+       
+       var mailOptions = {
+         from: '***REMOVED***',
+         to: '***REMOVED***',
+         subject: "New Booking",
+         text: "New booking recieved , check Admin page."
+       };
+       
+       transporter.sendMail(mailOptions).then(() => {
+        console.log('Email sent successfully');
+    }).catch((err) => {
+        console.log('Failed to send email');
+        console.error(err);
+    });
+       
+  });
 
 const Booking = mongoose.model('Booking',bookSchema);
 module.exports = Booking;

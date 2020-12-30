@@ -15,7 +15,7 @@ const port = process.env.PORT || 3000;
 
 const dbURI = "***REMOVED***";
 
-mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true })
 .then(result => {app.listen(port, () => {
     console.log(`Some shit is going down on port ${ port }`);
 });})
@@ -37,7 +37,7 @@ const handleErrors = (err) => {
       errors.password = 'That password is incorrect';
     }
   
-    // duplicate email error
+    // duplicate username error
     if (err.code === 11000) {
       errors.uname = 'that username is already registered';
       return errors;
