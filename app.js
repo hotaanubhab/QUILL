@@ -94,6 +94,7 @@ app.post('/signup',async (req, res) => {
     try {
       const user = await User.create({ uname, password });
       res.status(201).json({ user: user._id });
+      res.redirect('/Admin');
     }
     catch(err) {
       const errors = handleErrors(err);
