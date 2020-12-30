@@ -35,8 +35,22 @@ height: 40px;
   }
 }
   .admintable{
-    margin-top: 68px;
+    margin-top: 6px;
   }
+  .adminbtn{
+    background-color: rgb(243, 168, 97);
+    padding: 2px 8px;
+    color: white!important;
+    border-radius: 10px;
+    transition: .4s;
+    margin-right: 10px;
+  }
+  .adminbtn:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    background-color: rgb(231, 142, 59);
+  }
+
   /* spinner
   .spinner{
     width: 3rem;

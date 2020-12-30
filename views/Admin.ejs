@@ -6,15 +6,22 @@
         <link rel="stylesheet" href="../main.css">
       </head>
     <body clas="container text-muted">
-      <nav class="navbar fixed-top">
-        <a class="navbar-brand align-middle" href="/Home">
+     
+       <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
           <img src='../content/onlyQ.svg'  alt='logo'  >
-          <img src="../content/quill residence.svg" alt="">
+          <img src="../content/goa-candolim.svg" alt="">
         </a>
-        <ul class="navbar-nav">
-         </ul>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-link adminbtn" href="/logout">Logout</a>
+            <a class="nav-link adminbtn" href="/signup">Add User</a>
+          </div>
+        </div>
       </nav>
-          
         <table class="table admintable table-bordered">
          
           <% if (booking.length > 0) { %>
