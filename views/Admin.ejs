@@ -16,8 +16,8 @@
       </nav>
           
         <table class="table admintable table-bordered">
-            
-        <% if (booking.length > 0) { %>
+         
+          <% if (booking.length > 0) { %>
           
         <thead class="table-dark ">
           <tr>
@@ -32,7 +32,8 @@
             <th> </th>
           </tr>
         </thead>
-            <% booking.forEach(booking => { %>
+        
+          <% booking.forEach(booking => { %>   
                 <% 
                 var m = booking.check_in;
                 var n = booking.check_out;
@@ -53,29 +54,20 @@
                 <td><%= "Confirmed"%></td>
                 
                 <% } %>
+                
                 <td><a href="/admin/<%= booking._id%>&<%= !booking.status%>"><button>Change</button></a></td>
-                <td><a class='delete' data-doc="<%= booking._id %>" ><button>Delete</button></a></td>
+                <td><a href="/admin/<%= booking._id%>"><button>Details</button></a></td>
                 
             </tr>
-          </tbody>
             <% }) %>
           <% } else { %>
             <p>There are no bookings to display...</p>
           <% } %>
+          </tbody>
+            
+          
         </table>
-        <script>
-            const delB = document.querySelector('a.delete');
-            delB.addEventListener('click', (e) => {
-      const endpoint = `/admin/${delB.dataset.doc}`;
-
-      fetch(endpoint, {
-        method: 'DELETE',
-      })
-      .then(response => response.json())
-      .then(data => window.location.href = data.redirect)
-      .catch(err => console.log(err));
-    });
-        </script>
+        
          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
          <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     </body>

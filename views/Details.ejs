@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Booking Details</title>
+    </head>
+    <body>
+       
+                <% 
+                var m = booking.check_in;
+                var n = booking.check_out;
+                var checkin_String = m.getFullYear() +"/"+ (m.getMonth()+1) +"/"+ m.getDate();
+                var checkout_String = n.getFullYear() +"/"+ (n.getMonth()+1) +"/"+ n.getDate() %>
+              
+                
+                
+                <%= booking.first_name+' '+booking.last_name %><br>
+                <%= checkin_String %><br>
+                <%= checkout_String %><br>
+                <%= booking.adults %><br>
+                <%= booking.phone %><br>
+                <%= booking.email %><br>
+                <% if(booking.status==false) { %>
+                <%= "Not Confirmed"%>
+                
+                <% } else { %>
+                <%= "Confirmed"%>
+                <% } %><br>
+                <a class='delete' data-doc="<%= booking._id %>" ><button>Delete</button></a>          
+
+<script>
+    const delB = document.querySelector('a.delete');
+    delB.addEventListener('click', (e) => {
+const endpoint = `/admin/${delB.dataset.doc}`;
+var result = confirm("Want to delete?");
+if (result) {
+    fetch(endpoint, {
+method: 'DELETE',
+})
+.then(response => response.json())
+.then(data => window.location.href = data.redirect)
+.catch(err => console.log(err));
+};
+}
+    )
+</script>
+    </body>
+</html>

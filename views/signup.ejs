@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>
+            Admin Login
+        </title>
+    </head>
+    <body>
+
+<form action="/signup">
+  <h2>Sign up</h2>
+  <label for="uname">Username</label>
+  <input type="text" name="uname" required />
+  <div class="uname error"></div>
+  <label for="password">Password</label>
+  <input type="password" name="password" required />
+  <div class="password error"></div>
+  <button>Sign up</button>
+</form>
+
+
+
+<script>
+  const form = document.querySelector('form');
+  const unameError = document.querySelector('.uname.error');
+  const passwordError = document.querySelector('.password.error');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // reset errors
+    unameError.textContent = '';
+    passwordError.textContent = '';
+
+    // get values
+    const uname = form.uname.value;
+    const password = form.password.value;
+
+    try {
+      const res = await fetch('/signup', { 
+        method: 'POST', 
+        body: JSON.stringify({ uname, password }),
+        headers: {'Content-Type': 'application/json'}
+      });
+      const data = await res.json();
+      console.log(data);
+      if (data.errors) {
+        unameError.textContent = data.errors.uname;
+        passwordError.textContent = data.errors.uname;
+      }
+      if (data.user) {
+        location.assign('/');
+      }
+
+    }
+    catch (err) {
+      console.log(err);
+    }
+
+  });
+</script>
+
+</body>
+</html>
