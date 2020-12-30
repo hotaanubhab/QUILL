@@ -73,7 +73,7 @@ height: 40px;
 
   .vh99
   {
-    height: 98vh;
+    height: 97vh;
   }
   .vh50
   {
@@ -84,14 +84,24 @@ height: 40px;
     color: rgb(255,133,0) ;
     cursor: default;
   }
+  .orang1{
+    color: rgb(255,133,0) ;
+    cursor: ponter;
+  }
   .cursordefault{
     cursor: default;
   }
- 
+  .centerthis{
+    text-align: center;
+    }
+    
 
 /* CONTENT IN BODY  */
-.r1,.r2,.r3,.r4{
+.r2,.r3,.r4{
   padding-top: 1em;
+}
+.r1{
+  padding-top: 3vh;
 }
 .r4{
   margin-bottom: 20px;
@@ -108,6 +118,26 @@ cursor: default;
 list-style-type: circle;
 margin: 0%;
 padding-left:20px;
+background-repeat: no-repeat; 
+background-size: 50%;
+}
+.i1{
+  
+  background-image:url("/content/feather1.svg") ;
+   background-position-x: -5%;
+  background-position-y: -10%;  
+ }
+
+.i2{
+  background-image:url("/content/feather2.svg") ;
+   background-position-x: -20%;
+  background-position-y: 80%;  
+}
+.i3{
+  
+    background-image:url("/content/feather1.svg") ;
+     background-position-x: 130%;
+    background-position-y: 110%;  
 }
 /* BOTTOM BAR */
 .bottombar{
@@ -117,7 +147,7 @@ position:-webkit-sticky;
     z-index: 100;
     height:1.5vh;
     background: rgb(255,133,0);
-    background: linear-gradient(90deg, rgba(255,133,0,1) 0%, rgba(110,0,255,1) 47%, rgba(255,10,0,1) 100%);
+    background: linear-gradient(90deg, rgba(255,133,0,1) 0%, rgba(197,80,102,1) 30%, rgba(110,0,255,1) 50%, rgba(197,80,102,1) 70%, rgba(255,133,0,1) 100%);
 }
 
 /* BOOKING BUTTON */
@@ -125,7 +155,7 @@ position:-webkit-sticky;
 background-color: rgb(255,133,0);
 color: white;
 height: 40px;
-border-radius: 40px;
+border-radius: 20px;
 padding: 2px 8px;
 text-align: center;
 font-size: 26px;
@@ -235,12 +265,16 @@ text-align: center;
 
 @media (min-width:150px)  {
 
-.ctxt1,.ctxt4{
+.ctxt1{
 top: 15vh;
-right: 5vw; 
+right: 20vw; 
 left: 0vw;
-
 }
+.ctxt4{
+  top: 15vh;
+  right: 40vw; 
+  left: 0vw;
+  }
 .ctxt2,.ctxt5{
 top: 15vh;
 left: 5vw;
@@ -264,9 +298,14 @@ left: 0vw;
 
 @media (min-width:641px)  { 
 
-.ctxt1,.ctxt4{
+.ctxt1{
   top: 15vh;
   right: 25vw;
+  left: 0vw; 
+}
+.ctxt4{
+  top: 15vh;
+  right: 40vw;
   left: 0vw; 
 }
 .ctxt2,.ctxt5{
@@ -291,9 +330,14 @@ right: 0vw;
 @media (min-width:1025px) {
 
 
-.ctxt1,.ctxt4{
+.ctxt1{
   top: 15vh;
   right: 50vw;
+  left: 0vw; 
+}
+.ctxt4{
+  top: 15vh;
+  right: 70vw;
   left: 0vw; 
 }
 .ctxt2,.ctxt5{
@@ -318,7 +362,13 @@ right: 0vw;
 .mailtoolong{
 font-size: 0.95rem;
 }
-}.centerthis{
-text-align: center;
-/* display: inline; */
 }
+/* .feather1{
+  position: absolute;
+  height: 10rem;
+  width: auto;
+  bottom: 0;
+  right: 0;
+  z-index: ;
+} */
+
