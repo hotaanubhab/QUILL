@@ -165,18 +165,61 @@ position:-webkit-sticky;
 }
 
 /* BOOKING BUTTON */
- .bookbutton{
-background-color: rgb(255,133,0);
+.bookbtn{
+  background-color: rgb(216, 128, 14);
+  height: 40px;
+  padding: auto;
+  font-size: 1.4rem;
+  color: white!important;
+  border-radius: 30px;
+  transition: .4s;
+  text-align: center;
+  
+}
+.now{
+  display: inline-block;
+}
+ @media (min-width:10px) and (max-width:329px)
+{
+  .now{
+    display:none;
+  }
+} 
+
+.bookbtn:hover{
+  -webkit-transform: scale(1.1,1.1);
+  -moz-transform: scale(1.1,1.1);
+  -ms-transform: scale(1.1,1.1);
+  transform: scale(1.1,1.1);
+cursor: pointer;
+background-color:  #FF3814;
+color: white!important;
+
+} 
+ /* .bookbutton{
+  background-color: rgb(216, 128, 14);
 color: white;
 height: 40px;
+margin-top: auto;
+margin-bottom: auto;
 border-radius: 20px;
-padding: 2px 8px;
+padding:2px 5px!important;
 text-align: center;
-font-size: 26px;
-opacity: 1;
+
+font-size: 1.3rem;
 position: relative;
 z-index: 11;
 transition: 0.2s ease-in-out;
+}
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.now{
+  display: inline-block;
 }
  .bookbutton:hover{
   -webkit-transform: scale(1.1,1.1);
@@ -189,7 +232,7 @@ background-color:  #FF3814;
 } 
 .bookbutton:active{
   background-color:  #FF3814;
-}
+} */
 
 /* FOOTER */
 
@@ -203,7 +246,7 @@ z-index: 10000;
 }
 
 html{
-  background-color:  #f0f0f0e3;
+background-color:  #f0f0f0e3;
 }
 .fas,.fab,.far{
 font-size: 1.8rem;

@@ -1,186 +1,33 @@
 <html>
     <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
       <link rel='stylesheet' href='/main.css'>
+      <link rel='stylesheet' href='/404.css'>
       <title>Error - 404</title>
-        <style>
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700');
-@import url('https://fonts.googleapis.com/css?family=Catamaran:400,800');
-.error-container {
-  text-align: center;
-  font-size: 180px;
-  font-family: 'bahnschrift', sans-serif;
-  font-weight: 800;
-  margin: 20px 15px;
-}
-.error-container > span {
-  display: inline-block;
-  line-height: 0.7;
-  position: relative;
-  color: #FFB485;
-}
-.error-container > span {
-  display: inline-block;
-  position: relative;
-  vertical-align: middle;
-}
-.error-container > span:nth-of-type(1) {
-  color: #f2a5a5;
-  animation: colordancing 4s infinite;
-}
-.error-container > span:nth-of-type(3) {
-  color: #F56991;
-  animation: colordancing2 4s infinite;
-}
-.error-container > span:nth-of-type(2) {
-  width: 120px;
-  height: 120px;
-  border-radius: 999px;
-}
-.error-container > span:nth-of-type(2):before,
-.error-container > span:nth-of-type(2):after {
-	border-radius: 0%;
-	content:"";
-	position: absolute;
-	top: 0; left: 0;
-	width: inherit; height: inherit;
-  border-radius: 999px;
-	box-shadow: inset 30px 0 0 rgba(209, 242, 165, 0.4),
-				inset 0 30px 0 rgba(239, 250, 180, 0.4),
-				inset -30px 0 0 rgba(255, 196, 140, 0.4),	
-				inset 0 -30px 0 rgba(245, 105, 145, 0.4);
-  animation: shadowsdancing 4s infinite;
-}
-.error-container > span:nth-of-type(2):before {
-	-webkit-transform: rotate(45deg);
-	   -moz-transform: rotate(45deg);
-			transform: rotate(45deg);
-}
-
-.screen-reader-text {
-    position: absolute;
-    top: -9999em;
-    left: -9999em;
-}
-@keyframes shadowsdancing {
-  0% {
-    box-shadow: inset 30px 0 0 rgba(105, 218, 233, 0.3),
-				inset 0 30px 0 rgba(77, 112, 228, 0.3),
-				inset -30px 0 0 rgba(218, 64, 205,0.3),	
-				inset 0 -30px 0 rgba(120, 45, 190, 0.3);
-  }
-  25% {
-    box-shadow: inset 30px 0 0 rgba(82, 220, 238, 0.35),
-				inset 0 30px 0 rgba(40, 80, 219, 0.3),
-				inset -30px 0 0 rgba(220, 65, 205, 0.3),	
-				inset 0 -30px 0 rgba(150, 45, 190, 0.3);
-  }
-  50% {
-    box-shadow: inset 30px 0 0 rgba(61, 214, 235, 0.3),
-				inset 0 30px 0 rgba(30, 60, 228, 0.3),
-				inset -30px 0 0 rgba(220, 45, 205, 0.3),	
-				inset 0 -30px 0 rgba(180, 45, 190, 0.3);
-  }
-  75% {
-    box-shadow: inset 30px 0 0 rgba(14, 201, 226, 0.3),
-				inset 0 30px 0 rgba(20, 40, 228,0.3),
-				inset -30px 0 0 rgba(220, 25, 205, 0.3),	
-				inset 0 -30px 0 rgba(200, 45, 190, 0.3);
-  }
-  100% {
-    box-shadow: inset 30px 0 0 rgba(4, 206, 233, 0.3),
-				inset 0 30px 0 rgba(10, 20, 228,0.3),
-				inset -30px 0 0 rgba(220, 0, 205, 0.3),	
-				inset 0 -30px 0 rgba(230, 45, 190, 0.3);
-  }
-}
-@keyframes colordancing {
-  0% {
-    color: #fcb93e;
-  }
-  25% {
-    color: #ffaf19;
-  }
-  50% {
-    color:#ffa600;
-  }
-  75% {
-    color: #ffb833;
-  }
-  100% {
-    color: #ffcc6d;
-  }
-}
-@keyframes colordancing2 {
-  0% {
-    color: #fcb93e;
-  }
-  25% {
-    color: #ffaf19;
-  }
-  50% {
-    color:#ffa600;
-  }
-  75% {
-    color: #ffb833;
-  }
-  100% {
-    color: #ffcc6d;
-  }
-}
-
-/* demo stuff */
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-body {
-  background-color: #ffffff;
-  margin-bottom: 50px;
-}
-html, button, input, select, textarea {
-    font-family: 'Montserrat', Helvetica, sans-serif;
-    color: #92a4ad;
-}
-h1 {
-  text-align: center;
-  margin: 30px 15px;
-}
-.zoom-area { 
-  max-width: 490px;
-  margin: 30px auto 30px;
-  font-size: 19px;
-  text-align: center;
-}
-.link-container {
-  text-align: center;
-}
-.homelink:active,.homelink:visited,.homelink:link{
-  color:#eea214; 
-     text-decoration:none; 
-}
-.homelink:hover{
-  color:#d3982a; 
-     text-decoration:none; 
-     cursor:pointer;  
-}
-        </style>
     </head>
     <body>
-   
-    
-      <section class="error-container">
-        <span>4</span>
-        <span><span class="screen-reader-text">0</span></span>
-        <span>4</span>
-      </section>
+      <div class="container">
+      <nav class="navbar fixed-top">
+        <a class="navbar-brand align-middle" href="/Home">
+          <img src='../content/onlyQ.svg'  alt='logo'  >
+          <img src="../content/quill residence.svg" alt="">
+        </a>
+        <ul class="navbar-nav">
+         </ul>
+      </nav>
+      <div class=centerthis1>
+      <div class="error-container">
+        404
+      </div>
+    </div>
       <div class="link-container">
  
         
-    <div class="text-center text-muted h2" >Oops,The Page you requested was not found.<br>Go back to <a class="homelink" href="/">Home</a> </div>
+    <div class="text-center text-muted h2" >Oops, The Page you requested was not found.<br>Go back to <a class="homelink" href="/">Home</a> </div>
       </div>
-
+    </div>
       <div class="bottombar w-100"></div>
       <!--Scripts-->
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -188,27 +35,27 @@ h1 {
       <script src="https://kit.fontawesome.com/2291809f17.js" crossorigin="anonymous"></script>
      
     </body>
-    
-<footer class="text-muted conf-footer ">
-   
-  <div class="container">          
-           <h3 class='foothead'>Contact</h3>
-      
   
-  <div class="row">
-      <div class="wrap1 col-md-6 no-gutters"> 
-        <div class="wrap2"><a href="mailto:***REMOVED***"><i class="far fa-envelope "></i><span class="cont-txt mailtoolong">***REMOVED***</span></a></div>
-        <div class="wrap3"><a href="https://wa.me/***REMOVED***"target=”_blank><i class="fab fa-whatsapp"></i><span class="cont-txt ">***REMOVED***</span></a></div>  
-
+    <footer class="text-muted conf-footer ">
+   
+      <div class="container">          
+               <h3 class='foothead'>Contact</h3>
           
+      
+      <div class="row">
+          <div class="wrap1 col-md-6 no-gutters"> 
+            <div class="wrap2"><a href="mailto:***REMOVED***"><i class="far fa-envelope "></i><span class="cont-txt mailtoolong">***REMOVED***</span></a></div>
+            <div class="wrap3"><a href="https://wa.me/***REMOVED***"target=”_blank><i class="fab fa-whatsapp"></i><span class="cont-txt ">***REMOVED***</span></a></div>  
+    
+              
+          </div>
+          <div class="wrap1 col-md-6 no-gutters">
+              <div class="wrap4 cursordefault"><i class="fas fa-phone "></i><span class="cont-txt ">***REMOVED***</span></div>
+              <div class="wrap5"><a href="https://www.instagram.com/quillhotels/" target=”_blank” > <i class="fab  fa-instagram class="align-middle></i><span class="cont-txt ">@quillhotels</span></a></div>          
+          </div>
       </div>
-      <div class="wrap1 col-md-6 no-gutters">
-          <div class="wrap4 cursordefault"><i class="fas fa-phone "></i><span class="cont-txt ">***REMOVED***</span></div>
-          <div class="wrap5"><a href="https://www.instagram.com/quillhotels/" target=”_blank” > <i class="fab  fa-instagram class="align-middle></i><span class="cont-txt ">@quillhotels</span></a></div>          
-      </div>
-  </div>
-  <h6 class="foothead FH2">A Unit of SCAN Hospitality Pvt. Ltd.</h6>
-</footer>
-
+      <h6 class="foothead FH2">A Unit of SCAN Hospitality Pvt. Ltd.</h6>
+    </footer>
+    
 
 </html>

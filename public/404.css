@@ -1,0 +1,46 @@
+
+.error-container {
+  text-align: center;
+  display:inline-BLOCK;
+ 
+  font-size: 8rem;
+  font-family: 'bahnschrift', sans-serif;
+  font-weight: 800;
+  padding: 68px 15px 20px 15px;
+    background: rgb(255,133,0);
+    background: linear-gradient(90deg, rgba(255,133,0,1) 0%, rgba(255, 8, 0, 0.822) 100%);
+     -webkit-background-clip: text; 
+     background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    
+    
+}
+
+
+body{
+    height: max-content;
+}
+.centerthis1{
+display:flex;
+margin-left: auto;
+margin-right: auto;
+width: max-content; 
+}
+
+h1 {
+  text-align: center;
+  margin: 30px 15px;
+}
+.link-container {
+  text-align: center;
+}
+.homelink:active,.homelink:visited,.homelink:link{
+  color:#eea214; 
+     text-decoration:none; 
+}
+.homelink:hover{
+  color:#d3982a; 
+     text-decoration:none; 
+     cursor:pointer;  
+}
+     
