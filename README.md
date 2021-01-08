@@ -2,7 +2,7 @@
 <br>
 <hr>
 <h3>Overview</h3><br>
-Quill is a brand by SCAN hospitality. This is the website for Quill Residence, Candolim, Goa.
+Quill is a brand by SCAN Hospitality. This is the website for Quill Residence, Candolim, Goa.
 The website has a responsive design and has a functional inquiry form equipped with a mailer.
 <hr>
 <h3>Built with</h3><br>
@@ -25,4 +25,4 @@ Prabhav Tewari (Front-end)
 Anubhab Hota (Back-end)
 <br>
 <hr>
-<h4>All rights reserved by Scan hospitality</h4>
+<h4>All rights reserved by Scan Hospitality</h4>
